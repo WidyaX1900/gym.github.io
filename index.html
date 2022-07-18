@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymMagnetics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <nav>      
+        <header class="navheader">
+            <h2>GyMagnetics</h2>
+        </header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <input type="checkbox" name="" id="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <h1>Build your body and meet your perfect coach</h1>
+        <p>Health is most precious gift in this world. We must keep our body fit to increase our productivity</p>
+        <button type="button">See Our Class</button>
+    </section>
+
+    <section class="story">
+        <header class="story-header">
+            <h2>Why We Here?</h2>
+        </header>
+        <div class="story-content">
+            <figure class="story-figure">
+                <img src="img/images2.png" alt="">
+            </figure>
+            <div class="story-ourstory">
+                <p>
+                    Our goal is to make people have their bodygoals. We know you have so much reason to avoid 
+                    workout, especially afraid to be injured. So we GymMagnetics will help you with our class 
+                    and personal trainer to guide you reach your bodygoal.
+                </p>
+                <button class="story-btn">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="coach">
+        <header class="coach-header">
+            <h2>Meet Our Coach</h2>
+        </header>
+        <div class="coach-list">
+            <figure class="trainer-1">
+                <img src="img/images3.jpg" alt="">
+                <figcaption class="trainer1-desc">
+                    <h4>John Weasle</h4>
+                    <p>Body Builder Academy Graduate</p>
+                </figcaption>
+            </figure>
+            <figure class="trainer-2">
+                <img src="img/images4.png" alt="">
+                <figcaption class="trainer2-desc">
+                    <h4>Maria Clarissa</h4>
+                    <p>Owner Beauty Workout Academy</p>
+                </figcaption>
+            </figure>
+            <figure class="trainer-3">
+                <img src="img/images5.png" alt="">
+                <figcaption class="trainer3-desc">
+                    <h4>Michael Done</h4>
+                    <p>Owner Healthy Life Workout</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <header class="testimonials-header">
+            <h2>What Our Client's Said</h2>
+        </header>
+        <div class="testimonials-client">
+            <div class="client-1">
+                <div class="profile"></div>
+                <p>
+                    "I like to use GyMagnetics service for my personal training. 
+                    The coaches very professional and supportive even for a beginner.
+                    i really reccomended you to use this services."
+                </p>
+                <p>Marcus Pollo</p>
+            </div>
+            <div class="client-2">
+                <div class="profile"></div>
+                <p>
+                    "I love GyMagnetics they helped me to reach my bodygoal. I through the training
+                    with so fun and more importantly safe."
+                </p>
+                <p>Pinky Lovel</p>
+            </div>
+            <div class="client-3">
+                <div class="profile"></div>
+                <p>
+                    "I used to love gym but GyMagnetics give me experience. The coach
+                    are very friendly until i build a friendship with one of them"
+                </p>
+                <p>Robi Maximus</p>
+            </div>
+        </div>        
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; GyMagnetics 2022</p>
+    </footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle input');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function(){
+        nav.classList.toggle('slide');
+    });
+</script>
+</body>
+</html>

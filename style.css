@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Navigation Bar */
+nav{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #212121;
+    position: fixed;
+}
+
+nav .navheader h2{
+    display: none;
+    color: rgb(246, 246, 246);
+}
+
+nav ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+    background-color: #212121;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+nav ul.slide{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(246, 246, 246);
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(198, 196, 196);
+    transition: .3s;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-toggle span{
+    display: block;
+    background-color: white;
+    width: 28px;
+    height: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.menu-toggle input{
+    position: absolute;
+    top: 10px;
+    left: 100;
+    bottom: 0;
+    width: 60px;
+    height: 80px;
+    opacity: 0;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(0px, -4px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Ukuran Smartphone */
+/* Hero Section */
+.hero{
+    height: 100vh;
+    background-image: url(img/images1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hero h1{
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(245, 245, 245);
+    font-style: normal;
+    margin-left: 3%;
+    
+    
+}
+
+.hero p{
+    color: rgb(245, 245, 245);
+    font-size: 1.5rem;
+    margin-left: 3%;
+    font-weight: 700;
+}
+
+.hero button{
+    width: 13em;
+    height: 3em;
+    margin-left: 3%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    background-color: #FDA04A;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    box-shadow: 0 9px 15px #fda04a52;
+    transition: .3s;
+}
+
+.hero button:hover{
+    width: 13em;
+    height: 3em;
+    margin-left: 3%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    background-color: #eb9646;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    box-shadow: 0 9px 15px #fda04a52;
+}
+
+/* Story Section */
+.story{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.story .story-content{
+    display: grid;
+    grid-template-areas: 
+    "image"
+    "paragraf";
+}
+
+.story-figure figure{
+    grid-area: image;
+}
+
+.story .story-ourstory{
+    grid-area: paragraf;
+}
+
+.story .story-header h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.story-ourstory p{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.story-btn{
+    width: 12em;
+    height: 3em;
+    border: 2px solid #DF8A3C;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    color: #c67c37;
+    text-align: center;
+    transition: .5s;
+}
+
+.story-btn:hover{
+    width: 12em;
+    height: 3em;
+    background-color: #eb9646;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    color: white;
+}
+
+/* Personal Coach Section */
+.coach{
+    width: 80%;
+    margin: 60px auto;
+}
+
+.coach-header h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.coach .coach-list{
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    
+}
+
+/* Trainer 1 Section*/
+.coach-list .trainer-1 img{
+    width: 300px;
+    border-radius: 4px;
+}
+
+.coach-list .trainer-1 .trainer1-desc h4{
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+.coach-list .trainer-1 .trainer1-desc p{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #908f8f;
+}
+
+/* Trainer 2 Section */
+.coach-list .trainer-2 img{
+    width: 300px;
+    border-radius: 4px;
+}
+
+.coach-list .trainer-2 .trainer2-desc h4{
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+.coach-list .trainer-2 .trainer2-desc p{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #908f8f;
+}
+
+/* Trainer 3 Section */
+.coach-list .trainer-3 img{
+    width: 300px;
+    border-radius: 4px;
+}
+
+.coach-list .trainer-3 .trainer3-desc h4{
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+.coach-list .trainer-3 .trainer3-desc p{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #908f8f;
+}
+
+/* Trainer 2 & 3 not loaded */
+.coach-list .trainer-2, .coach-list .trainer-3{
+    display: none;
+}
+
+/* Testimonials Section */
+.testimonials{
+    width: 80%;
+    margin: 60px auto;
+}
+
+.testimonials .testimonials-header h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.testimonials .testimonials-client{
+    display: grid;
+    grid-template-areas: 
+        "client1"
+        "client2"
+        "client3";
+}
+
+/* Client 1 */
+.testimonials .testimonials-client .client-1{
+    grid-area: client1;
+    margin-top: 30px;
+}
+
+.testimonials .testimonials-client .client-1 .profile{
+    background-image: url(img/images6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.testimonials .testimonials-client .client-1 p{
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.testimonials .testimonials-client .client-1 p:nth-child(3){
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Client 2 */
+.testimonials .testimonials-client .client-2{
+    grid-area: client2;
+    margin-top: 30px;
+}
+
+.testimonials .testimonials-client .client-2 .profile{
+    background-image: url(img/images7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.testimonials .testimonials-client .client-2 p{
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.testimonials .testimonials-client .client-2 p:nth-child(3){
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Client 3 */
+.testimonials .testimonials-client .client-3{
+    grid-area: client3;
+    margin-top: 30px;
+}
+
+.testimonials .testimonials-client .client-3 .profile{
+    background-image: url(img/images8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.testimonials .testimonials-client .client-3 p{
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.testimonials .testimonials-client .client-3 p:nth-child(3){
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #212121;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Display Tablet */
+@media only screen and (min-width: 768px){
+
+    /* Hero Section */
+    .hero{
+        justify-content: center;
+    }
+
+    /* Story Section */
+    .story .story-header h2{
+        font-size: 3rem;
+    }
+
+    .story .story-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "image paragraf"
+        "image paragraf";
+    }
+
+    .story .story-ourstory{
+        margin-top: 100px;
+    }
+
+    .story .story-ourstory p{
+        font-size: 1.3rem;
+    }
+
+    /* Coach Section */
+    .coach .coach-header h2{
+        font-size: 3rem;
+
+    }
+
+    .coach .coach-list{
+        gap: 110px;
+    }
+
+    .coach-list .trainer-2, .coach-list .trainer-3{
+        display: grid;
+    }
+
+    /* Testimonial Section */
+    .testimonials .testimonials-header h2{
+        font-size: 3rem;
+    }
+
+    .testimonials .testimonials-client{
+        display: grid;
+        grid-template-areas: 
+            "client1 client2 client3"
+            "client1 client2 client3"
+            "client1 client2 client3";
+        gap: 60px;
+    }
+   
+}
+
+/* Dekstop Display */
+@media only screen and (min-width: 1280px) {
+    nav{
+        height: 80px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #212121;
+    }
+    
+    nav .navheader h2{
+        display: flex;
+        color: rgb(246, 246, 246);
+        font-size: 2.3rem;
+    }
+    
+    nav ul{
+        width: 40%;
+        height: 0;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    nav ul li{
+        background-color: none;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: rgb(246, 246, 246);
+    }
+    
+    nav ul li a:hover{
+        text-decoration: none;
+        color: rgb(198, 196, 196);
+        transition: .3s;
+    }
+
+    .menu-toggle span, .menu-toggle input{
+        display: none;
+    }
+}
+
+
+
+
+
